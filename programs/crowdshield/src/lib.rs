@@ -75,8 +75,8 @@ pub mod crowdshield {
         instructions::withdraw_liquidity::withdraw_liquidity(ctx)
     }
 
-    /// Organizer claims bond back (or gets slashed)
-    pub fn claim_bond(ctx: Context<ClaimBond>, cancellation_resolved_yes: bool) -> Result<()> {
-        instructions::claim_bond::claim_bond(ctx, cancellation_resolved_yes)
+    /// Organizer claims bond back (or gets slashed based on on-chain resolution)
+    pub fn claim_bond(ctx: Context<ClaimBond>) -> Result<()> {
+        instructions::claim_bond::claim_bond(ctx)
     }
 }

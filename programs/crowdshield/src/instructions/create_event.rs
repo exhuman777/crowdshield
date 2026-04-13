@@ -144,13 +144,15 @@ pub fn create_event(
     event.max_tickets = max_tickets;
     event.bond_amount = bond_amount;
     event.controversy_score = 0;
-    event.is_resolved = false;
+    event.resolved_mask = 0;
+    event.outcome_mask = 0;
     event.bump = ctx.bumps.event;
 
     // Init cover pool with 80% max coverage ratio
     let pool = &mut ctx.accounts.cover_pool;
     pool.event = event.key();
     pool.total_liquidity = 0;
+    pool.total_deposits = 0;
     pool.total_premiums = 0;
     pool.covers_sold = 0;
     pool.max_coverage_ratio = 80;

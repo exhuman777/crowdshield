@@ -12,6 +12,7 @@ pub struct Resolve<'info> {
     #[account(
         mut,
         constraint = event.authority == authority.key() @ CrowdShieldError::Unauthorized,
+        constraint = !event.is_cover_type_resolved(&cover_type) @ CrowdShieldError::EventAlreadyResolved,
     )]
     pub event: Account<'info, Event>,
 
@@ -20,13 +21,14 @@ pub struct Resolve<'info> {
         mut,
         constraint = cover.event == event.key(),
         constraint = !cover.is_resolved @ CrowdShieldError::EventAlreadyResolved,
+        constraint = cover.cover_type == cover_type,
     )]
     pub cover: Account<'info, Cover>,
 }
 
 pub fn resolve(
     ctx: Context<Resolve>,
-    _cover_type: CoverType,
+    cover_type: CoverType,
     outcome: bool,
 ) -> Result<()> {
     let cover = &mut ctx.accounts.cover;
@@ -34,14 +36,15 @@ pub fn resolve(
     cover.is_resolved = true;
     cover.outcome = outcome;
 
-    // Mark event as resolved (simplified: once any cover resolves, event marked)
+    // Mark this specific cover type as resolved on the event
     let event = &mut ctx.accounts.event;
-    event.is_resolved = true;
+    event.resolve_cover_type(&cover_type, outcome);
 
     msg!(
-        "Cover resolved: type={:?} outcome={}",
+        "Cover resolved: type={:?} outcome={} | event resolved_mask={}",
         cover.cover_type,
         if outcome { "YES" } else { "NO" },
+        event.resolved_mask,
     );
     Ok(())
 }

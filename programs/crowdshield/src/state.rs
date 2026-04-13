@@ -20,10 +20,45 @@ pub struct Event {
     pub bond_amount: u64,
     /// Controversy score 0-100, set by authority/oracle
     pub controversy_score: u8,
-    /// Whether the event has been resolved
-    pub is_resolved: bool,
+    /// Bitmask of resolved cover types (bit 0=Cancellation, 1=Delay, 2=Headliner, 3=Weather, 4=Venue)
+    pub resolved_mask: u8,
+    /// Bitmask of cover types resolved YES (same bit layout)
+    pub outcome_mask: u8,
     /// PDA bump
     pub bump: u8,
+}
+
+impl Event {
+    pub fn is_cover_type_resolved(&self, ct: &CoverType) -> bool {
+        self.resolved_mask & (1 << cover_type_index(ct)) != 0
+    }
+
+    pub fn cover_type_outcome(&self, ct: &CoverType) -> bool {
+        self.outcome_mask & (1 << cover_type_index(ct)) != 0
+    }
+
+    pub fn resolve_cover_type(&mut self, ct: &CoverType, outcome: bool) {
+        let bit = 1 << cover_type_index(ct);
+        self.resolved_mask |= bit;
+        if outcome {
+            self.outcome_mask |= bit;
+        }
+    }
+
+    /// All 5 cover types resolved
+    pub fn is_fully_resolved(&self) -> bool {
+        self.resolved_mask == 0b11111
+    }
+}
+
+pub fn cover_type_index(ct: &CoverType) -> u8 {
+    match ct {
+        CoverType::Cancellation => 0,
+        CoverType::DelayOver2Hours => 1,
+        CoverType::HeadlinerChanged => 2,
+        CoverType::WeatherRain => 3,
+        CoverType::VenueChanged => 4,
+    }
 }
 
 #[account]
@@ -31,8 +66,10 @@ pub struct Event {
 pub struct CoverPool {
     /// Event this pool covers
     pub event: Pubkey,
-    /// Total USDC deposited by LPs
+    /// Total USDC in pool (deposits + premiums)
     pub total_liquidity: u64,
+    /// Sum of all LP original deposits (for pro-rata withdrawal calc)
+    pub total_deposits: u64,
     /// Total premiums collected from cover sales
     pub total_premiums: u64,
     /// Number of covers sold
@@ -103,10 +140,8 @@ pub struct LpPosition {
     pub owner: Pubkey,
     /// Pool this position belongs to
     pub pool: Pubkey,
-    /// Amount deposited in USDC
+    /// Amount deposited in USDC (tracks original deposits for pro-rata share)
     pub deposited: u64,
-    /// Basis points of pool owned (0-10000)
-    pub share_bps: u16,
     /// PDA bump
     pub bump: u8,
 }

@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use anchor_spl::token::{self, Token, TokenAccount, Transfer};
 
 use crate::errors::CrowdShieldError;
-use crate::state::Event;
+use crate::state::{CoverType, Event};
 
 #[derive(Accounts)]
 pub struct ClaimBond<'info> {
@@ -11,7 +11,8 @@ pub struct ClaimBond<'info> {
 
     #[account(
         constraint = event.authority == organizer.key() @ CrowdShieldError::Unauthorized,
-        constraint = event.is_resolved @ CrowdShieldError::EventNotResolved,
+        // Cancellation cover type must be resolved before bond can be claimed
+        constraint = event.is_cover_type_resolved(&CoverType::Cancellation) @ CrowdShieldError::EventNotResolved,
     )]
     pub event: Account<'info, Event>,
 
@@ -31,7 +32,7 @@ pub struct ClaimBond<'info> {
     )]
     pub bond_authority: AccountInfo<'info>,
 
-    /// Pool vault — receives slashed bond if cancellation=YES
+    /// Pool vault receives slashed bond if cancellation=YES
     #[account(
         mut,
         seeds = [b"pool_vault", event.key().as_ref()],
@@ -57,10 +58,13 @@ pub struct ClaimBond<'info> {
     pub token_program: Program<'info, Token>,
 }
 
-pub fn claim_bond(ctx: Context<ClaimBond>, cancellation_resolved_yes: bool) -> Result<()> {
+pub fn claim_bond(ctx: Context<ClaimBond>) -> Result<()> {
     let event = &ctx.accounts.event;
     let bond = event.bond_amount;
     let event_key = event.key();
+
+    // Read cancellation outcome from on-chain state, not caller input
+    let cancellation_yes = event.cover_type_outcome(&CoverType::Cancellation);
 
     let bond_seeds = &[
         b"bond_authority".as_ref(),
@@ -69,8 +73,8 @@ pub fn claim_bond(ctx: Context<ClaimBond>, cancellation_resolved_yes: bool) -> R
     ];
     let bond_signer = &[&bond_seeds[..]];
 
-    if cancellation_resolved_yes {
-        // Organizer caused cancellation — bond slashed to pool vault
+    if cancellation_yes {
+        // Organizer caused cancellation, bond slashed to pool vault
         token::transfer(
             CpiContext::new_with_signer(
                 ctx.accounts.token_program.to_account_info(),
@@ -85,7 +89,7 @@ pub fn claim_bond(ctx: Context<ClaimBond>, cancellation_resolved_yes: bool) -> R
         )?;
         msg!("Bond slashed: {} USDC sent to cover pool", bond);
     } else {
-        // No cancellation — full bond returned to organizer
+        // No cancellation, full bond returned to organizer
         token::transfer(
             CpiContext::new_with_signer(
                 ctx.accounts.token_program.to_account_info(),

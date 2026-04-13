@@ -9,8 +9,9 @@ pub struct WithdrawLiquidity<'info> {
     #[account(mut)]
     pub lp: Signer<'info>,
 
+    /// Event must be fully resolved (all cover types) before LP withdrawal
     #[account(
-        constraint = event.is_resolved @ CrowdShieldError::EventNotResolved,
+        constraint = event.is_fully_resolved() @ CrowdShieldError::EventNotResolved,
     )]
     pub event: Account<'info, Event>,
 
@@ -26,10 +27,11 @@ pub struct WithdrawLiquidity<'info> {
         seeds = [b"lp_position", cover_pool.key().as_ref(), lp.key().as_ref()],
         bump = lp_position.bump,
         constraint = lp_position.owner == lp.key() @ CrowdShieldError::Unauthorized,
+        constraint = lp_position.deposited > 0 @ CrowdShieldError::InsufficientLiquidity,
     )]
     pub lp_position: Account<'info, LpPosition>,
 
-    /// Pool vault — source of withdrawal
+    /// Pool vault, source of withdrawal
     #[account(
         mut,
         seeds = [b"pool_vault", event.key().as_ref()],
@@ -56,16 +58,16 @@ pub struct WithdrawLiquidity<'info> {
 }
 
 pub fn withdraw_liquidity(ctx: Context<WithdrawLiquidity>) -> Result<()> {
-    let _pool = &ctx.accounts.cover_pool;
+    let pool = &ctx.accounts.cover_pool;
     let pos = &ctx.accounts.lp_position;
 
-    // LP gets proportional share of remaining vault balance
-    // share = vault_balance * share_bps / 10000
+    // Pro-rata share: (lp_deposited / total_deposits) * vault_balance
+    // This correctly distributes premiums earned AND losses from payouts
     let vault_balance = ctx.accounts.pool_vault.amount;
     let withdraw_amount = (vault_balance as u128)
-        .checked_mul(pos.share_bps as u128)
+        .checked_mul(pos.deposited as u128)
         .unwrap()
-        .checked_div(10_000)
+        .checked_div(pool.total_deposits as u128)
         .unwrap() as u64;
 
     require!(withdraw_amount > 0, CrowdShieldError::InsufficientLiquidity);
@@ -95,6 +97,7 @@ pub fn withdraw_liquidity(ctx: Context<WithdrawLiquidity>) -> Result<()> {
     // Update pool state
     let pool = &mut ctx.accounts.cover_pool;
     pool.total_liquidity = pool.total_liquidity.saturating_sub(withdraw_amount);
+    pool.total_deposits = pool.total_deposits.saturating_sub(pos.deposited);
     pool.pool_capacity = (pool.total_liquidity as u128)
         .checked_mul(pool.max_coverage_ratio as u128)
         .unwrap()
@@ -104,7 +107,6 @@ pub fn withdraw_liquidity(ctx: Context<WithdrawLiquidity>) -> Result<()> {
     // Zero out LP position
     let pos = &mut ctx.accounts.lp_position;
     pos.deposited = 0;
-    pos.share_bps = 0;
 
     msg!("LP withdrew {} USDC", withdraw_amount);
     Ok(())
