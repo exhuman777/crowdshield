@@ -245,9 +245,29 @@ y = draw_text(c, y, "4. CARD DETAIL (continued)", size=20, color=GREEN, bold=Tru
 y -= 15
 
 y = draw_text(c, y, "The pricing uses a bonding curve.", size=22)
-y = draw_text(c, y, "Early buyers get cheaper cover.", size=22)
-y = draw_text(c, y, "The math guarantees pool solvency", size=22)
-y = draw_text(c, y, "at every state.", size=22)
+y = draw_text(c, y, "Four variables multiplied:", size=22)
+y = draw_text(c, y, "controversy, demand, time, base rate.", size=22)
+y -= 10
+y = draw_text(c, y, "This Wireless card:", size=22)
+y = draw_text(c, y, "90 days out, controversy 35,", size=22)
+y = draw_text(c, y, "premium was 10 USDC.", size=22)
+y = draw_text(c, y, "Sponsors pulled out, controversy 92,", size=22)
+y = draw_text(c, y, "premium jumped to 59 USDC.", size=24, bold=True)
+y = draw_text(c, y, "One day before: 233 USDC", size=22)
+y = draw_text(c, y, "for a 300 USDC payout.", size=22)
+
+c.showPage()
+new_page(c)
+y = H - 30*mm
+y = draw_text(c, y, "4. CARD DETAIL (continued)", size=20, color=GREEN, bold=True)
+y -= 15
+y = draw_text(c, y, "Early buyers paid 3.5% of payout.", size=24, bold=True)
+y = draw_text(c, y, "Late buyers paid 78%.", size=24, bold=True)
+y -= 10
+y = draw_text(c, y, "The curve rewards early conviction", size=22)
+y = draw_text(c, y, "and makes it impossible to drain the pool", size=22)
+y = draw_text(c, y, "because the last covers cost nearly", size=22)
+y = draw_text(c, y, "as much as they pay out.", size=22)
 y -= 15
 y = draw_text(c, y, "We built this full stack ourselves.", size=24, bold=True)
 y = draw_text(c, y, "Nine smart contract instructions.", size=22)

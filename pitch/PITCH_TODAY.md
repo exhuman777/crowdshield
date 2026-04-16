@@ -121,11 +121,24 @@ Binary question: did wildfire exceed 500 hectares?
 Yes or no. Oracle confirms, payout lands.
 No subjectivity.
 
-The pricing uses a bonding curve
-from mechanism design research.
-Controversy multipliers, demand curves, time decay.
-Early buyers get cheaper cover.
-The math guarantees pool solvency at every state.
+The pricing uses a bonding curve.
+Four variables multiplied together:
+controversy score, demand ratio,
+time to event, base risk rate.
+
+This Wireless card: bought 90 days out
+at controversy score 35, premium was 10 USDC.
+As sponsors pulled out, controversy hit 92,
+premium jumped to 59 USDC.
+One day before cancellation: 233 USDC
+for a 300 USDC payout.
+
+Early buyers paid 3.5% of the payout.
+Late buyers paid 78%.
+The curve rewards early conviction
+and makes it impossible to drain the pool
+because the last covers cost nearly
+as much as they pay out.
 
 We built this full stack ourselves.
 Nine smart contract instructions.
