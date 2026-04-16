@@ -1,266 +1,142 @@
 # CrowdShield - Pitch Script (3 min)
 
-You share your screen showing localhost:4242.
-You click through the app live while talking.
-No slides. No tabs. Just the product.
+Screen share localhost:4242. Click through live.
 
 ---
 
-## 1. START ON HOMEPAGE (0:00)
+## 1. HOMEPAGE (0:00)
 
-Show: localhost:4242 — hero visible, featured cards below
+April seventh. Wireless Festival. Cancelled.
+50,000 fans. Flights booked. Hotels non-refundable.
+Ye banned from the UK. Done.
 
-Say:
+Forty festivals cancelled in 2025 alone.
+$6.5 billion insurance market, growing to $23 billion.
+But nobody under 35 buys insurance.
+They won't fill out forms.
+They will open a collectible pack.
 
-April seventh.
-Wireless Festival.
-Cancelled.
-
-50,000 fans stranded.
-Flights booked.
-Hotels non-refundable.
-Ye banned from the UK.
-Sponsors fled.
-Done.
-
-Wireless wasn't special.
-Over forty festivals cancelled in 2025 alone.
-Wildfires shut down Greek islands.
-Airlines collapsed routes overnight.
-
-Insurance exists for all of this.
-Six and a half billion dollar market.
-Growing to twenty-three billion by 2035.
-
-But nobody under 35 has ever
-voluntarily bought an insurance policy.
-
-They won't fill out claim forms.
-They won't read policy documents.
-
-But they will open a collectible pack.
-
-→ CLICK "Open Packs" button
+→ CLICK "Open Packs"
 
 ---
 
-## 2. PACK STORE (0:35)
+## 2. PACK STORE (0:30)
 
-Show: Pack store with 4 pack tiers
-
-Say:
-
-A twenty-four billion dollar gaming market
-and a six and a half billion dollar insurance market
-were waiting for someone to connect them.
-
+$24 billion gaming market meets $6.5 billion insurance.
 71% of blockchain gamers are 18 to 34.
-The exact demographic that rejects insurance.
-The exact demographic that opens packs.
+Rejects insurance. Opens packs.
 
-→ CLICK "Open Pack" on Starter Shield
-→ Wait for cards to reveal (takes ~3 seconds)
+→ CLICK "Open Pack" on Starter Shield (wait ~3s)
 
 ---
 
-## 3. PACK OPENED (0:55)
+## 3. PACK OPENED (0:45)
 
-Show: 3 cards revealed, gold Wireless TRIGGERED card visible
+CrowdShield. Each card is a real
+parametric micro-insurance policy.
+Wildfires. Flights. Festivals. Pandemics.
 
-Say:
+That gold card? Wireless Cancelled.
+300 USDC paid out April 7th.
+No claim. No form. Three seconds.
 
-CrowdShield.
-Each card is a real parametric micro-insurance policy
-on a real-world event.
-
-Wildfires. Flight disruptions.
-Festival cancellations. Pandemics.
-
-That gold card?
-Wireless Festival Cancelled.
-Already triggered.
-300 USDC paid out automatically on April 7th.
-No claim filed. No form.
-Three seconds on Solana.
-
-A five dollar pack.
-Three hundred dollar payout.
+$5 pack, $300 payout.
 Where does the money come from?
-
-Same place as any insurance pool.
 Most cards never trigger.
-Every pack sold puts 55% into the payout pool.
-Trigger probabilities run 1 to 8 percent.
-Thousands of expired cards fund
-the few that fire.
-Expected value per pack stays below pack price.
-The spread funds the pool.
-Same math as traditional insurance,
-completely different experience.
+55% of every pack goes to the payout pool.
+Triggers run 1 to 8 percent.
+Thousands of expired cards fund the few that fire.
+Same math as insurance, different experience.
 
-→ CLICK the Greece Wildfire card
+→ CLICK Greece Wildfire card
 
 ---
 
-## 4. CARD DETAIL PAGE (1:20)
+## 4. CARD DETAIL (1:15)
 
-Show: Greece Wildfire card with odds, backstory, news
-Scroll slowly so they see the depth
+Scroll slowly
 
-Say:
+67% trigger probability.
+Ten years of European fire data.
+Seven of ten summers exceeded threshold.
+Oracle: EFFIS satellite. Binary: yes or no.
 
-Every card has real data behind it.
+Pricing: bonding curve.
+Wireless at day 90, score 35: premium 10 USDC.
+Score hits 92: premium 59 USDC.
+Day before cancellation: 233 USDC for 300 payout.
+Early buyers paid 3.5%. Late buyers paid 78%.
+Last covers cost nearly as much as they pay out.
+Pool can't be drained.
 
-This card: 67% trigger probability.
-Based on ten years of European Forest Fire data.
-Seven of the last ten summers
-exceeded the threshold.
-
-Oracle source: EFFIS. Satellite-confirmed.
-Binary question: did wildfire exceed 500 hectares?
-Yes or no. Oracle confirms, payout lands.
-No subjectivity.
-
-The pricing uses a bonding curve.
-Four variables multiplied together:
-controversy score, demand ratio,
-time to event, base risk rate.
-
-This Wireless card: bought 90 days out
-at controversy score 35, premium was 10 USDC.
-As sponsors pulled out, controversy hit 92,
-premium jumped to 59 USDC.
-One day before cancellation: 233 USDC
-for a 300 USDC payout.
-
-Early buyers paid 3.5% of the payout.
-Late buyers paid 78%.
-The curve rewards early conviction
-and makes it impossible to drain the pool
-because the last covers cost nearly
-as much as they pay out.
-
-We built and tested this on Solana smart contracts.
-The core logic works.
-But production deployment needs
-security audits and hardened engineering.
-That's what funding is for.
-
-What you see here:
-twelve fully researched cards
-with real oracle sources,
-working pricing engine,
-full consumer frontend.
+Tested on Solana smart contracts. Core logic works.
+Production needs security audits, that's what funding is for.
+Twelve cards, real oracles, working pricing engine.
 We build fast.
 
-→ CLICK "Events" in the navbar
-→ CLICK "Wireless Festival 2026"
+→ CLICK Events → Wireless Festival
 
 ---
 
-## 5. WIRELESS EVENT PAGE (1:55)
+## 5. WIRELESS EVENT (1:50)
 
-Show: Red CANCELLED banner, controversy gauge at 92
+Two revenue streams.
+Packs: 20% take. Covers: 12% spread. Secondary: 5% royalty.
+10k packs/month + 10 events = $1M+ annually.
 
-Say:
+Organizer bonds: 2% of ticket revenue, slashed on cancellation. On-chain.
 
-Two products, two revenue streams.
-
-Shield Packs: 20% platform take.
-Event Shields: 12% spread on premiums.
-Plus 5% royalties on secondary trades.
-
-Ten thousand packs per month, ten events:
-over a million dollars annually.
-
-Organizers stake bonds.
-Minimum 2% of ticket revenue.
-Cancelled by organizer fault?
-Bond gets slashed. On-chain. Automatic.
-
-→ SCROLL DOWN to Resolution Simulator
-→ CLICK "Simulate: Event Cancelled"
-→ Wait for payout animation (~3 seconds)
+→ SCROLL to simulator → CLICK "Simulate" (wait ~3s)
 
 ---
 
-## 6. RESOLUTION SIMULATOR COMPLETES (2:25)
+## 6. PAYOUT COMPLETE (2:15)
 
-Show: Green checkmark, "300.00 USDC", "27.6x return"
+Polymarket: pure speculation. War bets. Nuclear bets. Congress banning it.
 
-Say:
-
-Polymarket proved people want exposure
-to real-world events.
-Two billion in volume.
-
-But Polymarket is pure speculation.
-Anyone can bet on anything.
-War outcomes. Nuclear detonations.
-Congress introducing bans.
-
-CrowdShield is structurally different.
-
-Every card pays out based on a parametric trigger.
-Not opinion. Not a vote. Verifiable data.
-Satellite imagery. Flight network status.
-Official government announcements.
-The payout follows truth, not consensus.
+CrowdShield: structurally different.
+Payouts follow parametric triggers. Verifiable data.
+Satellite imagery. Flight networks. Government announcements.
+Not opinion. Not votes. Truth.
 
 That eliminates moral hazard.
-Nobody profits from causing the disaster.
-The World Bank validated this model
-across thirty countries.
-We apply it to a generation
-that traditional insurance ignores.
+Nobody profits from causing disaster.
+World Bank validated this across thirty countries.
 
-Five actors in the system:
-fans, organizers, LPs, traders, collectors.
-Every actor's dominant strategy
-is individually optimal
+Five actors: fans, organizers, LPs, traders, collectors.
+Every dominant strategy is individually optimal
 AND collectively welfare-maximizing.
-No prisoner's dilemma. Cooperation dominates.
+Cooperation dominates.
 
-5,400 projects in the Colosseum corpus.
-Zero combine parametric insurance
-with gamified distribution.
-We want to be the first.
+5,400 Colosseum projects. Zero in this intersection.
 
 (slow down)
 
-10.86 USDC premium.
-300 USDC payout.
-Three seconds.
-No form.
-No waiting.
+10.86 premium. 300 payout. Three seconds.
+No form. No waiting.
 
 (pause)
 
-CrowdShield.
-Collect your shields.
-Protect against chaos.
+CrowdShield. Collect your shields. Protect against chaos.
 
-(silence — hold 3 seconds — done)
+(silence — 3 seconds — done)
 
 ---
 
 ## Timing
 
-| Section | Time | What you click |
-|---------|------|---------------|
-| Homepage | 0:00-0:35 | Click "Open Packs" |
-| Pack Store | 0:35-0:55 | Click "Open Pack" on Starter |
-| Pack Opened | 0:55-1:20 | Click Greece Wildfire card |
-| Card Detail | 1:20-1:55 | Click Events → Wireless |
-| Wireless Event | 1:55-2:25 | Scroll → Click Simulate |
-| Payout Done | 2:25-3:00 | Nothing. Talk to camera. |
+| Section | Time | Click |
+|---------|------|-------|
+| Homepage | 0:00-0:30 | "Open Packs" |
+| Pack Store | 0:30-0:45 | "Open Pack" Starter |
+| Pack Opened | 0:45-1:15 | Greece Wildfire card |
+| Card Detail | 1:15-1:50 | Events → Wireless |
+| Wireless | 1:50-2:15 | Scroll → Simulate |
+| Payout | 2:15-3:00 | Talk to camera |
 
-## Practice Plan
+## Practice
 
-**Round 1 (5 min):** Click through the whole flow once silently. Learn where each button is. The pack opening takes ~3 seconds, the simulator takes ~3 seconds. Know the wait times.
-
-**Round 2 (4 min):** Read the script out loud while clicking. Time yourself. Target: 2:55 to 3:05. If you finish early, you're rushing pauses.
-
-**Round 3 (2 min):** Practice the ending 5 times. Each time slower. "10.86 premium. 300 payout. Three seconds." The last rep should feel uncomfortably slow. That's the right speed.
-
-**Round 4 (3 min):** Full run, timed. One clean run = ready.
+1. Click through silently once. Learn button locations.
+2. Read out loud + click. Target: 2:55-3:05.
+3. Ending 5x, each slower. Last rep = right speed.
+4. One clean full run = ready.
