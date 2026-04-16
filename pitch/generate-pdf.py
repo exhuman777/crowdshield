@@ -191,7 +191,29 @@ y = draw_text(c, y, "Three seconds on Solana.", size=24, bold=True)
 y -= 10
 y = draw_text(c, y, "A five dollar pack.", size=22)
 y = draw_text(c, y, "Three hundred dollar payout.", size=24, bold=True)
-y -= 20
+y = draw_text(c, y, "Where does the money come from?", size=22)
+y -= 10
+y = draw_text(c, y, "Same place as any insurance pool.", size=22)
+y = draw_text(c, y, "Most cards never trigger.", size=22)
+y = draw_text(c, y, "Every pack sold puts 55%", size=22)
+y = draw_text(c, y, "into the payout pool.", size=22)
+
+c.showPage()
+new_page(c)
+y = H - 30*mm
+y = draw_text(c, y, "3. PACK OPENED (continued)", size=20, color=GREEN, bold=True)
+y -= 15
+y = draw_text(c, y, "Trigger probabilities run 1 to 8 percent.", size=22)
+y = draw_text(c, y, "Thousands of expired cards fund", size=22)
+y = draw_text(c, y, "the few that fire.", size=22)
+y -= 10
+y = draw_text(c, y, "Expected value per pack", size=22)
+y = draw_text(c, y, "stays below pack price.", size=22)
+y = draw_text(c, y, "The spread funds the pool.", size=22)
+y -= 10
+y = draw_text(c, y, "Same math as traditional insurance,", size=24, bold=True)
+y = draw_text(c, y, "completely different experience.", size=24, bold=True)
+y -= 25
 y = draw_action(c, y, "CLICK the Greece Wildfire card")
 
 # ─── SECTION 4 ──────────────────────────────────────

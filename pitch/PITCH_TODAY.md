@@ -85,6 +85,18 @@ Three seconds on Solana.
 
 A five dollar pack.
 Three hundred dollar payout.
+Where does the money come from?
+
+Same place as any insurance pool.
+Most cards never trigger.
+Every pack sold puts 55% into the payout pool.
+Trigger probabilities run 1 to 8 percent.
+Thousands of expired cards fund
+the few that fire.
+Expected value per pack stays below pack price.
+The spread funds the pool.
+Same math as traditional insurance,
+completely different experience.
 
 → CLICK the Greece Wildfire card
 
