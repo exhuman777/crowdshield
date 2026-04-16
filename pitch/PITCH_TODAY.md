@@ -140,13 +140,18 @@ and makes it impossible to drain the pool
 because the last covers cost nearly
 as much as they pay out.
 
-We built this full stack ourselves.
-Nine smart contract instructions.
-Bonding curve engine.
-Twelve fully researched cards
-with real oracle sources.
-We build fast because
-we've shipped on-chain before.
+We built and tested this on Solana smart contracts.
+The core logic works.
+But production deployment needs
+security audits and hardened engineering.
+That's what funding is for.
+
+What you see here:
+twelve fully researched cards
+with real oracle sources,
+working pricing engine,
+full consumer frontend.
+We build fast.
 
 → CLICK "Events" in the navbar
 → CLICK "Wireless Festival 2026"
