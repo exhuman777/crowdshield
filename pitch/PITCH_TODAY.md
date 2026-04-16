@@ -141,3 +141,33 @@ Switch tabs with Cmd+Tab. Practice the switches until smooth.
 6. **Polymarket contrast**: Confident, not aggressive. You're drawing a line, not attacking them.
 7. **Closing sequence**: Each sentence shorter than the last. Slow down progressively. "Collect your shields. Protect against chaos." at half speed. Eye contact. Then silence. Don't say thank you. Let them come to you.
 8. **Word count**: ~490 words at 160 wpm = 3 minutes 4 seconds (buffer for pauses and tab switches).
+
+## Practice Plan
+
+**Round 1: Setup (5 min)**
+- Open all 5 tabs from the setup table above
+- Do every pre-click (open the Starter pack, scroll wildfire to odds, click the simulator)
+- Verify each tab shows what the "On screen" section describes
+- If anything looks different, fix it before practicing
+
+**Round 2: Read-through with switches (4 min)**
+- Read the full script out loud, switching tabs at each `[Switch to Tab N]` marker
+- Time yourself. Target: 2:55-3:05
+- If under 2:50 you're rushing the pauses. Add silence after "Done.", after "Three seconds.", after "Protect against chaos."
+- If over 3:10 cut filler words, tighten delivery
+
+**Round 3: Tab switching drill (2 min)**
+- Cmd+Tab through all 5 tabs in sequence, 3 times
+- Talk through the transition. Don't pause to switch. The switch happens mid-sentence
+- Goal: the audience never notices you changed tabs
+
+**Round 4: Closing drill (2 min)**
+- Practice Tab 5 section 5 times in a row
+- Each rep: slower than the last
+- Final rep should feel uncomfortably slow. That's the right speed
+- "10.86 premium. 300 payout. Three seconds." [pause] "Collect your shields. Protect against chaos." [3 seconds of silence]
+
+**Round 5: Full dress rehearsal (3 min)**
+- Full script, full tab switches, timed
+- Record yourself if possible. Watch for: rushing numbers, mumbling market sizes, breaking eye contact on the close
+- One clean run = ready
