@@ -4,90 +4,118 @@
 
 **Screen rotation**: Pre-load 5 tabs. Switch every ~35 seconds. Audience sees the app, you never reference it directly.
 
+**Criteria this pitch must hit:**
+- Founder + Market Fit (20%) — why YOU, why NOW
+- Insight (20%) — unique understanding, new trend creating opportunity
+- Product + Execution (15%) — working product, speed, alternatives
+- Market Size (15%) — TAM, growth rate
+- Communication (15%) — clarity, inspiration
+- Viability (15%) — business model, scalability
+
 ---
 
 ## SCREEN 1: Home page (hero + featured Shield Cards)
 
-> Every plan you have ever made was a bet against chaos. Every flight booked, every ticket purchased, every hotel confirmed: an act of faith that the world will hold its shape long enough for you to arrive.
+> April seventh. Wireless Festival. Cancelled. 50,000 fans stranded with non-refundable flights and hotels. Ye banned from the UK by the Home Office. Sponsors fled. Done.
 
-> It won't. Not always.
+> Wireless wasn't special. Over forty festivals were cancelled in 2025 alone. Wildfires shut down Greek islands. Airlines collapsed routes. Each time: plans destroyed, money gone, no recourse.
 
-[Pause.]
+> Insurance exists for this. Six and a half billion dollar market, growing to twenty-three billion by 2035 at 13.6% CAGR. But nobody under 35 has ever voluntarily bought an insurance policy. The incumbents, Allianz, AXA, Cover Genius, deliver paper forms, thirty-day claims, static pricing. Zero transparency. Zero engagement.
 
-> April seventh. Wireless Festival. Cancelled. 50,000 fans. Flights booked. Hotels non-refundable. Six months of group-chat planning, gone. Ye banned from the UK. Sponsors fled. Done.
+[Beat.]
 
-> Wireless wasn't special. Over forty festivals were cancelled in 2025 alone. Wildfires shut down Greek islands. Airlines collapsed routes overnight. Each time: plans destroyed, money gone, no recourse.
+> We saw the gap.
 
 ---
 
 ## SCREEN 2: Pack opening (cards revealed, gold Wireless card visible)
 
-> Insurance exists for this. Six and a half billion dollar market. Growing to twenty-three billion by 2035. But every player, Allianz, AXA, Cover Genius, operates the same way. Paper forms. Thirty-day claims. Static pricing. Zero transparency.
+**[INSIGHT — why this works, why now]**
 
-> Nobody under 35 has ever voluntarily bought an insurance policy. But they will open a collectible pack.
+> The insight: a twenty-four billion dollar gaming market and a six and a half billion dollar insurance market were waiting for someone to connect them. 71% of blockchain gamers are 18 to 34, the exact demographic that rejects traditional insurance. They won't fill out a claim form. They will open a collectible pack.
 
-[Beat.]
+> CrowdShield. Each pack contains Shield Cards. Each card is a real parametric micro-insurance policy on a real-world event. Wildfires. Flight disruptions. Festival cancellations. All backed by real oracle data from EFFIS, USGS, NOAA.
 
-> CrowdShield. Each pack contains Shield Cards. Each card is a parametric micro-insurance policy on a real-world event. Wildfires. Flight disruptions. Festival cancellations. Pandemics. All backed by real oracle data: satellite imagery from EFFIS, seismology from USGS, hurricane tracking from NOAA.
-
-> That gold card? Wireless Festival Cancelled. Already triggered. 300 USDC paid out automatically on April 7th. No claim. No form. Three seconds.
+> That gold card? Wireless Festival Cancelled. Already triggered. 300 USDC paid out automatically on April 7th. No claim filed. No form. Three seconds on Solana.
 
 ---
 
 ## SCREEN 3: Card detail page (Greece Wildfire, showing odds, backstory, news)
 
-> Every card has depth. The Greece Wildfire card has a trigger probability of 65%, based on ten years of European Forest Fire data. Seven of the last ten summers saw fires above the threshold. You can see the news feed, the risk factors, the exact binary question the oracle will answer.
+**[PRODUCT + EXECUTION — show depth, show it works]**
 
-> This is where a six and a half billion dollar insurance market meets a twenty-four billion dollar gaming market. Nobody was standing at that intersection. We are.
+> Every card has real data behind it. The Greece Wildfire card: 67% trigger probability based on ten years of European Forest Fire data. Seven of ten summers exceeded the threshold. You see the news feed, risk factors, the exact binary question the oracle answers.
 
-> The mechanism is parametric. A trigger fires not because someone filed a claim, but because something verifiable happened. Binary: yes or no. The payout follows truth, not paperwork. The pricing follows a mathematical curve, drawn from mechanism design research, that rewards early conviction and penalizes late panic.
+> The mechanism is parametric. Triggers fire because something verifiable happened, not because someone filed paperwork. Binary: yes or no. Pricing follows a bonding curve with controversy multipliers, drawn from Hanson's mechanism design research. Early buyers get cheaper cover. The math guarantees pool solvency at every state.
+
+**[FOUNDER-MARKET FIT — weave in naturally]**
+
+> We built the full stack ourselves. Nine smart contract instructions, bonding curve pricing engine, ticket-gated cover minting for regulatory defensibility, twelve fully researched cards with real oracle sources. Solana program compiles, frontend ships, pack animations run. We build fast because we've done this before.
 
 ---
 
 ## SCREEN 4: Wireless Festival event page (CANCELLED banner, controversy gauge at 92)
 
-> We also protect specific events directly. This is Wireless Festival. Controversy Score, 92 out of 100. Fed by news sentiment, market signals, and community polls. The timeline traces exactly how it escalated: March 31st announced, April 4th Pepsi pulls out, April 5th the Prime Minister condemns it, April 7th banned.
+**[VIABILITY — business model, unit economics]**
 
-> Every fan who held a cancellation cover got paid instantly. Every fan who held a Wireless Shield Card got paid. On-chain. Automatic. The oracle confirmed, the smart contract executed. No one filed anything.
+> Two products, two revenue streams. Shield Packs: 20% platform take on every pack sold. Event Shields: 12% spread on cover premiums. Plus 5% royalties on secondary market trades, yield fees on idle pool capital, organizer SaaS dashboards.
+
+> Unit economics work today. Ten thousand packs per month at $25 average, plus ten events per month, generates over a million dollars annually. Break-even at fifteen events and five thousand packs. At scale: five million plus.
+
+> Organizers stake bonds, minimum 2% of ticket revenue, slashed on cancellation. Skin in the game aligns incentives. LPs earn premiums plus DeFi yield on idle capital. Profitable below 5% cancellation rates.
 
 ---
 
 ## SCREEN 5: Resolution simulator (300 USDC payout complete, green checkmark)
 
-> Now. You might ask: how is this different from Polymarket? Polymarket let people bet on whether downed pilots would be rescued alive. On nuclear detonations. Congress is introducing bans.
+**[DIFFERENTIATION + CLOSE]**
 
-> We draw a different line. You do not bet on chaos. You shield against it. Every card has insurance utility. Cover minting requires insurable interest. The distinction is not semantic. It is ethical.
+> How we differ from Polymarket: they let people bet on whether downed pilots would be rescued alive. On nuclear detonations. Congress introducing bans. We require insurable interest. You hold the ticket, you access the cover. That distinction matters for regulation and for ethics.
+
+> No Colosseum project has combined parametric insurance with gamified distribution before. Five thousand projects in the corpus, zero in this intersection. The prediction market category has traction with judges. Insurance has zero accelerator companies. We want to be the first.
 
 [Slow down.]
 
-> Twenty-three centuries ago, merchants on the island of Rhodes agreed: if cargo must be thrown overboard to save a ship, every merchant shares the loss. Not the unlucky one alone. All of them. Together. That principle never changed. We just rebuilt it.
+> 300 USDC. Three seconds. No form. No waiting. That is the product.
 
-> The community is global. The pool is on-chain. The settlement is instant. The proof is public.
+[Final. Make eye contact.]
 
-[Final. Let it land.]
+> CrowdShield. Collect your shields. Protect against chaos.
 
-> CrowdShield. The crowd is the shield.
+[Silence. Hold it.]
 
 ---
 
 ## Timing Guide
 
-| Screen | Time | Duration |
-|--------|------|----------|
-| 1. Home hero | 0:00 | ~35s |
-| 2. Pack opening | 0:35 | ~35s |
-| 3. Card detail | 1:10 | ~40s |
-| 4. Event page | 1:50 | ~35s |
-| 5. Resolution payout | 2:25 | ~35s |
-| **Total** | | **~3:00** |
+| Screen | Time | Duration | Criteria Hit |
+|--------|------|----------|-------------|
+| 1. Home hero | 0:00 | ~35s | Market Size, Communication |
+| 2. Pack opening | 0:35 | ~35s | Insight (convergence thesis) |
+| 3. Card detail | 1:10 | ~40s | Product + Execution, Founder Fit |
+| 4. Event page | 1:50 | ~35s | Viability (business model) |
+| 5. Resolution payout | 2:25 | ~35s | Differentiation, Close |
+| **Total** | | **~3:00** | All 6 criteria covered |
+
+## Criteria Coverage Checklist
+
+| Criteria | Weight | Where in pitch | Key line |
+|----------|--------|---------------|----------|
+| **Founder + Market Fit** | 20% | Screen 3 | "Built the full stack ourselves. Nine instructions, bonding curve engine, twelve cards. We build fast." |
+| **Insight** | 20% | Screen 2 | "$24B gaming market and $6.5B insurance market waiting for someone to connect them" |
+| **Product + Execution** | 15% | Screen 3 | Working demo, real data, bonding curve math, parametric mechanism |
+| **Market Size** | 15% | Screen 1 | "$6.5B growing to $23.3B by 2035 at 13.6% CAGR" |
+| **Communication** | 15% | Throughout | Hook (Wireless), convergence thesis, "3 seconds" refrain, clean close |
+| **Viability** | 15% | Screen 4 | "20% pack take, 12% cover spread, 5% secondary royalty. $1M+ at modest scale" |
 
 ## Delivery Notes
 
-- **No clicking during the pitch.** Screens are pre-loaded in tabs. Cmd+Tab to switch. Clean.
-- **Don't say "as you can see" or "let me show you."** The screens are ambient. You're telling a story, the visuals happen to be there.
-- **Rhodes merchants line**: This closes the pitch. Deliver it slower than everything before it. Make eye contact through the camera. Pause after "together."
-- **"Three seconds"**: Every time you say this number, pause slightly before it. Let the speed contrast land.
-- **Convergence line** ("$6.5B meets $24B"): This is the business thesis in one sentence. Deliver it like a headline, not a detail.
-- **Polymarket contrast**: Confident, not aggressive. You're not attacking them. You're drawing a line.
-- **Final line**: Half speed. "The crowd... is the shield." Then silence. Don't rush to say thank you. Let them sit with it.
-- **~480 words at 160 wpm = exactly 3 minutes.**
+- **No clicking during the pitch.** Screens pre-loaded in tabs. Cmd+Tab to switch.
+- **Don't say "as you can see" or "let me show you."** Screens are ambient.
+- **"Three seconds"**: Pause slightly before this number every time. Let the speed contrast land.
+- **Convergence line** ("$6.5B meets $24B"): Deliver like a headline.
+- **Business model section**: Rattle the numbers confidently. Don't apologize for unit economics.
+- **Founder fit line**: Casual, not boastful. "We build fast because we've done this before." Implies track record without listing credentials.
+- **Polymarket contrast**: Confident, not aggressive. Drawing a line, not attacking.
+- **Final line**: "Collect your shields. Protect against chaos." Half speed. Eye contact. Then silence.
+- **~490 words at 160 wpm = exactly 3 minutes.**
